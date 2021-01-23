@@ -1,2 +1,5 @@
-# PrimeTheme
-Adds a theme for Skeletron Prime made by Risyosa.
+# Credits
+
+Music by: Risyosa
+
+Mod by: apotofkoolaid
