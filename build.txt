@@ -1,0 +1,4 @@
+displayName = Skeletron Prime Theme
+author = apotofkoolaid
+version = 2.0.8
+includeSource = true

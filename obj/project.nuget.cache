@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "C50r4TqiSxMQ8iTpXyUe894/PxSXwe4Vzeu/N5sUAt3unN/nlVnL713jhhZNp8d9bNOx1RDi30B+2+D1e6cJOg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\apotofkoolaid\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\PrimeTheme\\PrimeTheme.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\apotofkoolaid\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}
