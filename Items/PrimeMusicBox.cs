@@ -10,13 +10,13 @@ namespace PrimeTheme.Items
 	{
 		public override LocalizedText DisplayName => Language.GetOrRegister("Music Box (Skeletron Prime)");
 
+		public override LocalizedText Tooltip => Language.GetOrRegister("");
+
 		public override void SetStaticDefaults()
 		{
-			Item.ResearchUnlockCount = 1;
-
 			if (!Main.dedServ)
 			{
-				MusicLoader.AddMusicBox(Mod, MusicLoader.GetMusicSlot(Mod, "Music/SkeletronPrime"), ModContent.ItemType<Items.PrimeMusicBox>(), ModContent.TileType<Tiles.PrimeMusicBox>());
+				MusicLoader.AddMusicBox(Mod, MusicLoader.GetMusicSlot(Mod, "Music/SkeletronPrime"), ModContent.ItemType<PrimeMusicBox>(), ModContent.TileType<Tiles.PrimeMusicBox>());
 			}
 		}
 
