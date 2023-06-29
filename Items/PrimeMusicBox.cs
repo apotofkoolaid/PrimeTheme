@@ -2,19 +2,22 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Utilities;
-using Terraria.GameContent.Creative;
+using Terraria.Localization;
 
 namespace PrimeTheme.Items
 {
 	public class PrimeMusicBox : ModItem
 	{
+		public override LocalizedText DisplayName => Language.GetOrRegister("Music Box (Skeletron Prime)");
+
+		public override LocalizedText Tooltip => Language.GetOrRegister("");
+
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Music Box (Skeletron Prime)");
-
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-
-			MusicLoader.AddMusicBox(Mod, MusicLoader.GetMusicSlot(Mod, "Music/SkeletronPrime"), ModContent.ItemType<Items.PrimeMusicBox>(), ModContent.TileType<Tiles.PrimeMusicBox>());
+			if (!Main.dedServ)
+			{
+				MusicLoader.AddMusicBox(Mod, MusicLoader.GetMusicSlot(Mod, "Music/SkeletronPrime"), ModContent.ItemType<PrimeMusicBox>(), ModContent.TileType<Tiles.PrimeMusicBox>());
+			}
 		}
 
 		public override void SetDefaults()
@@ -31,7 +34,6 @@ namespace PrimeTheme.Items
 			Item.rare = ItemRarityID.LightRed;
 			Item.value = 100000;
 			Item.accessory = true;
-			Item.canBePlacedInVanityRegardlessOfConditions = true;
 		}
 
 		public override bool? PrefixChance(int pre, UnifiedRandom rand)
