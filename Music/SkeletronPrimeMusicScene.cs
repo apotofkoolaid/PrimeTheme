@@ -20,7 +20,7 @@ namespace PrimeTheme.Music
             get
             {
                 var calamityMod = ModLoader.TryGetMod("CalamityMod", out Mod calamity);
-                return Main.masterMode && (bool)calamity.Call("DifficultyActive", "revengeance") ? SceneEffectPriority.BossMedium : SceneEffectPriority.BossLow;
+                return calamityMod && Main.masterMode && (bool)calamity.Call("DifficultyActive", "revengeance") ? SceneEffectPriority.BossMedium : SceneEffectPriority.BossLow;
             }
         }
 
